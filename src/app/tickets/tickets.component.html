@@ -1,0 +1,16 @@
+<div class="tickets">
+  <h2>tickets component</h2>
+  <ul>
+    <li *ngFor="let ticket of tickets ">
+      <form #myForm="ngForm">
+       <p>ticket number: {{ticket.id}} </p>
+        <p>movie id: {{ticket.movieId}} </p>
+        <p>movie name: {{movieName}} </p>
+        <p>row number: {{ticket.numberOfRow}} </p>
+        <p>place number: {{ticket.numberOfPlace}} </p>
+        <p>ticket status: {{ticket.ticketStatus}} </p>
+        <button type="button" class="btn btn-success" (click)="onSubmit(ticket)">Buy</button>
+      </form>
+    </li>
+  </ul>
+</div>

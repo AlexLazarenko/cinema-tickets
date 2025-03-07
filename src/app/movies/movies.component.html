@@ -1,0 +1,11 @@
+<div class="movies">
+  <h2>movies component</h2>
+  <button (click)="openDialog()">Заказать звонок</button>
+  <img alt="photo" src="assets/images/1.jpg">
+  <ul>
+    <li *ngFor="let movie of movies ">
+      <a [routerLink]="['/movies', movie.id]">{{movie.nameOfMovie}}</a>
+      <p>{{movie.movieDateTime}}</p>
+    </li>
+  </ul>
+</div>

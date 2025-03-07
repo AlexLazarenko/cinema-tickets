@@ -1,0 +1,9 @@
+.movies{
+ padding: .5rem 1rem;
+ border: 1px dashed #ccc;
+ margin-bottom: 1rem;
+ background-color: #4285b4;
+ h2 {
+  margin-bottom: .5rem;
+ }
+}

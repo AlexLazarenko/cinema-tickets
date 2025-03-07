@@ -1,0 +1,9 @@
+<div class="movie">
+ <h2>Single movie component</h2>
+  <p>{{movie.nameOfMovie}}</p>
+  <p>{{movie.movieDateTime}}</p>
+  <p>{{movie.description}}</p>
+  <img [attr.src]="movie.image"/>
+  <br>
+  <a [routerLink]="['/tickets', movie.id, movie.nameOfMovie]">Buy ticket</a>
+</div>

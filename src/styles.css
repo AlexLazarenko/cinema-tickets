@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+/* Задаёт шрифт для всего содержимого HTML-документа*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html{
+font-family: 'Roboto', sans-serif;
+}
+
+/* Установка глобального фона для всего приложения */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Стили для заголовков */
+h1, h2, h3 {
+  margin: 0;
+  padding: 10px;
+  color: #4285b4;
+}
+
+/* Стили для кнопок */
+button {
+  background-color: #4285b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #3572a5;
+}
+
+/* Стили для форм */
+input {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+

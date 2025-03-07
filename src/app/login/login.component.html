@@ -1,0 +1,16 @@
+<div class="login">
+ <h2>Login</h2>
+    <form #myForm="ngForm">
+    <fieldset ng-disabled="myForm.$submitted">
+      <label>Username</label>&nbsp;
+      <input type="text" name="username" placeholder="size between 1 and 30"
+         minlength="1" maxlength="30" required ngModel>
+      <br>
+      <label>Password</label>&nbsp;
+      <input type="text" name="password" placeholder="size between 8 and 30"
+         minlength="8" maxlength="30" required ngModel>
+      <br>
+      <button type="button" class="btn btn-success" (click)="onSubmit(myForm)">Submit</button>
+    </fieldset>
+  </form>
+</div>
