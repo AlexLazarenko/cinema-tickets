@@ -1,20 +1,16 @@
 import { Component } from '@angular/core';
+import { NgOptimizedImage } from "@angular/common";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-header', // Название тега компонента
-  templateUrl: './header.component.html',
+  templateUrl: './header.component.html', // Путь к HTML-файлу компонента
   standalone: true,
-  // Путь к HTML-файлу компонента
+  imports: [
+    NgOptimizedImage,
+    RouterLink
+  ],
   styleUrls: ['./header.component.css'] // Путь к файлу стилей компонента
 })
 export class HeaderComponent {
-  // Здесь можно добавить свойства и методы для работы хедера
-  title: string = 'Добро пожаловать!';
-
-  constructor() {}
-
-  // Например, метод для обработки кликов по кнопке
-  onButtonClick(): void {
-    console.log('Кнопка нажата!');
-  }
 }

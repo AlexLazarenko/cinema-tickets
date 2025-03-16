@@ -1,0 +1,129 @@
+<div class="calculate">
+  <h2>Выберите количество этажей</h2>
+  <form #myFormLevel="ngForm">
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedLevel" name="options" value="Один" />
+      <p>Один</p>
+    </label>
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedLevel" name="options" value="Два" />
+      <p>Два</p>
+    </label>
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedLevel" name="options" value="Больше двух" />
+      <p>Больше двух</p>
+    </label>
+    <p>Количество этажей: {{ selectedLevel }}</p>
+  </form>
+  <h2>Выберите материал стен</h2>
+  <form #myFormMaterial="ngForm">
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedMaterial" name="options" value="Пеноблок" />
+      <p>Пеноблок</p>
+    </label>
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedMaterial" name="options" value="Брус" />
+      <p>Брус</p>
+    </label>
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedMaterial" name="options" value="Другой материал" />
+      <p>Другой материал</p>
+    </label>
+    <p>Материал стен: {{ selectedMaterial }}</p>
+  </form>
+  <h2>Выберите количество комнат</h2>
+  <form #myFormRooms="ngForm">
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedRooms" name="options" value="Две" />
+      <p>Две</p>
+    </label>
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedRooms" name="options" value="Три" />
+      <p>Три</p>
+    </label>
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedRooms" name="options" value="Более трёх" />
+      <p>Более трёх</p>
+    </label>
+    <p>Количество комнат: {{ selectedRooms }}</p>
+  </form>
+  <h2>Есть ли участок в собственности?</h2>
+  <form #myFormField="ngForm">
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedField" name="options" value="Да" />
+      <p>Да</p>
+    </label>
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedField" name="options" value="В поисках" />
+      <p>В поисках</p>
+    </label>
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedField" name="options" value="В процессе приобретения" />
+      <p>В процессе приобретения</p>
+    </label>
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedField" name="options" value="Нужна помощь в подборе" />
+      <p>Нужна помощь в подборе</p>
+    </label>
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedField" name="options" value="Нет участка" />
+      <p>Нет участка</p>
+    </label>
+    <p>Есть ли участок в собственности: {{ selectedField }}</p>
+  </form>
+  <h2>Планируемый бюджет</h2>
+  <form #myFormMoney="ngForm">
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedMoney" name="options" value="от 3 до 5 млн р." />
+      <p>от 3 до 5 млн р.</p>
+    </label>
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedMoney" name="options" value="от 5 до 7 млн р." />
+      <p>от 5 до 7 млн р.</p>
+    </label>
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedMoney" name="options" value="от 7 до 10 млн р." />
+      <p>от 7 до 10 млн р.</p>
+    </label>
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedMoney" name="options" value="более 10 млн р." />
+      <p>более 10 млн р.</p>
+    </label>
+    <p>Планируемый бюджет: {{ selectedMoney }}</p>
+  </form>
+  <h2>Планируете ли оформлеть ипотеку или кредит?</h2>
+  <form #myFormCredit="ngForm">
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedCredit" name="options" value="Да, уже подобрали банк" />
+      <p>Да, уже подобрали банк</p>
+    </label>
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedCredit" name="options" value="Да, нужна помощь с оформлением" />
+      <p>Да, нужна помощь с оформлением</p>
+    </label>
+    <label class="radio-label">
+      <input type="radio" [(ngModel)]="selectedCredit" name="options" value="Нет, планирую строительство на собственные средства" />
+      <p>Нет, планирую строительство на собственные средства</p>
+    </label>
+    <p>Планируете ли оформлеть ипотеку или кредит?: {{ selectedCredit }}</p>
+  </form>
+  <div class="userData">
+    <h2>Ваши данные</h2>
+    <form #myFormContact="ngForm">
+      <label>
+        <p>Имя:</p>
+        <input class="user-input" type="text" [(ngModel)]="userName" name="userName" placeholder="Введите ваше имя" required />
+      </label>
+      <label>
+        <p>Телефон:</p>
+        <input class="user-input" type="tel" [(ngModel)]="userPhone" name="userPhone" placeholder="Введите ваш номер телефона" required />
+      </label>
+    </form>
+    <button (click)="collectData()">Отправить запрос на расчет дома</button>
+  </div>
+  <div class="confidentiality">
+    <p>Нажимая на кнопку "Отправить запрос на расчет дома" Вы соглашаетесь на обработку персональных данных в соответствии с условиями
+      <a [routerLink]="'/confidentiality'">политики конфиденциальности</a>
+    </p>
+  </div>
+</div>

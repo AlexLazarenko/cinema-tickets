@@ -1,17 +1,116 @@
 header {
-  background-color: #4285b4;
-  color: white;
-  padding: 1rem;
-}
-
-nav ul {
-  list-style: none;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column; /* Располагаем содержимое по вертикали */
+  align-items: center; /* Центрируем содержимое по горизонтали */
+  background-color: #aeb0b2; /* Цвет фона */
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 180px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-nav ul li a {
-  text-decoration: none;
+.logo-image {
+  position: absolute; /* Фиксируем логотип в левом верхнем углу */
+  top: 20px;
+  left: 20px;
+  transition: background-color 0.3s, transform 0.3s; /* Анимация */
+  cursor: pointer; /* Меняем курсор на "руку" при наведении */
+}
+
+.logo-image img {
+  height: 160px; /* Размер логотипа */
+  width: auto;
+}
+
+.logo-image:hover {
+  transform: scale(1.10); /* Увеличение кнопки на 5% */
+}
+
+.header-content {
+  display: flex;
+  align-items: center; /* Центрируем содержимое */
+  text-align: center;
+  gap: 120px;
+}
+
+.header-content p{
+  font-size: 1.75rem;
   color: white;
   font-weight: bold;
+}
+
+.header-content h2{
+  font-size: 3.5rem;
+  color: black;
+}
+
+.header-content button{
+  font-family: 'EB Garamond', serif;
+  font-size: 2.5rem;
+  border-radius: 20px; /* Закругление углов */
+  background-color: #4285b4;
+}
+
+.header-content button:hover {
+  transform: scale(1.05); /* Увеличение кнопки на 5% */
+}
+
+.build {
+  font-family: 'Vivaldi', sans-serif;
+  text-align: left;
+}
+
+.phone-number {
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  font-size: 1.75rem;
+  color: white;
+  font-weight: bold;
+}
+
+.time {
+  position: absolute;
+  top: 60px;
+  right: 390px;
+}
+
+.book {
+  position: absolute;
+  top: 125px;
+  right: 390px;
+}
+
+.phone {
+  position: absolute;
+  top: 4px;
+  right: 390px;
+}
+
+.time img{
+  height: 60px; /* Размер логотипа */
+  width: auto;
+}
+
+.book img{
+  height: 60px; /* Размер логотипа */
+  width: auto;
+}
+
+.phone img{
+  height: 60px; /* Размер логотипа */
+  width: auto;
+}
+
+.phone-number a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.phone-number a:hover {
+  color: #ffcc00; /* Цвет номера при наведении */
 }

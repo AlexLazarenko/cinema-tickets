@@ -1,9 +1,20 @@
 .movie{
- padding: .5rem 1rem;
- border: 1px dashed #ccc;
+ padding: 0;
  margin-bottom: 1rem;
+  margin-top: 210px;
 
  h2 {
   margin-bottom: .5rem;
  }
+  p {
+    font-size: 1.2rem;
+  }
+
+  .universal-image {
+    max-width: 100%;
+    /* Изображение адаптируется под контейнер */
+    height: auto;
+    display: flex; /* Используем inline-flex для корректного выравнивания */
+    flex-direction: column; /* Располагаем элементы вертикально */
+  }
 }

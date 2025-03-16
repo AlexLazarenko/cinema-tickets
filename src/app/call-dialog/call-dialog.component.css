@@ -1,5 +1,35 @@
 .call-dialog {
-  background-color: #4285b4;
+  background-color: #aeb0b2;
   color: white;
   padding: 1rem;
-}
+  }
+
+  h2 {
+    color: white;
+  }
+
+  button {
+    background-color: #4285b4;
+    margin-top: 10px;
+    color: white;
+  }
+
+  label {
+    margin-top: 10px;
+  }
+
+  p {
+   font-size: 0.75rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    cursor: pointer; /* Изменение курсора при наведении */
+  }
+
+  a:hover {
+    color: #ffcc00; /* Цвет номера при наведении */
+  }
+

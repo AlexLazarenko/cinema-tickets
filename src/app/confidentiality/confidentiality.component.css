@@ -1,0 +1,15 @@
+.confidentiality {
+  padding: 0;
+  margin-top: 200px; /* Отступ сверху соответствует высоте хедера */
+  margin-bottom: 1rem;
+  margin-left: 10px;
+  background-color: #aeb0b2; /* Цвет фона */
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}

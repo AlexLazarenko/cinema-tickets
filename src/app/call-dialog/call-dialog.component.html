@@ -1,11 +1,21 @@
-<h2>Заказать звонок</h2>
-<form>
-  <label for="name">Имя:</label>
-  <input id="name" type="text" placeholder="Введите имя">
+<div class="call-dialog">
+  <h2>Заказать звонок</h2>
+  <form #myForm="ngForm" (ngSubmit)="submitForm(myForm)">
+    <label for="name">Имя:</label>
+    <input id="name" type="text" placeholder="Введите ваше имя" minlength="1" maxlength="30" required ngModel>
+      <div *ngIf="myForm.controls['name']?.invalid">
+        <small>Имя обязательно и должно быть не менее 1 символа.</small>
+      </div>
+    <label for="phone">Телефон:</label>
+    <input id="phone" type="tel" placeholder="Введите ваш номер телефона" pattern="^(\\+)(\\d{4})(\\d{7})$" required ngModel>
+      <div *ngIf="myForm.controls['phone']?.invalid">
+        <small>Введите корректный номер телефона.</small>
+      </div>
+    <button type="submit" [disabled]="myForm.invalid">Заказать звонок</button>
+    <p>Нажимая на кнопку "Заказать звонок" Вы соглашаетесь на обработку персональных данных в соответствии с условиями
+      <a [routerLink]="'/confidentiality'">политики конфиденциальности</a>
+    </p>
+  </form>
+</div>
 
-  <label for="phone">Телефон:</label>
-  <input id="phone" type="tel" placeholder="Введите телефон">
-
-  <button type="button" (click)="submitForm()">Отправить</button>
-</form>
 

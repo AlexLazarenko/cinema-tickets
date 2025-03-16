@@ -1,11 +1,42 @@
 <div class="movies">
-  <h2>movies component</h2>
-  <button (click)="openDialog()">Заказать звонок</button>
-  <img alt="photo" src="assets/images/1.jpg">
+  <div class="image-overlay-container">
+    <img class="top-background-image" ngSrc="assets/images/main-banner-1.jpg" alt="Фоновое изображение" height="578" width="1440" priority  />
+    <div class="overlay-content">
+      <div class="top-overlay-text">Строительство домов под ключ<br>
+        в СПб и ЛО со всеми коммуникациями<br> и гарантией 25 лет</div>
+      <div class="top2-overlay-text">Ипотека от 3%</div>
+      <div class="top3-overlay-text">Фиксируем цену и сроки в договоре</div>
+      <div class="top4-overlay-text">Подберём участок, поможем с ипотекой, оформим все документы</div>
+      <div class="top5-overlay-text">Предложим варианты на любой бюджет по реальной стоимости</div>
+      <button class="overlay-button" (click)="openDialog()">Заказать звонок</button>
+    </div>
+  </div>
+  <nav>
   <ul>
-    <li *ngFor="let movie of movies ">
-      <a [routerLink]="['/movies', movie.id]">{{movie.nameOfMovie}}</a>
-      <p>{{movie.movieDateTime}}</p>
+    <li>
+      <button class="custom-button" [routerLink]="['/houses', 1]" >
+        <span class="button-image">
+          <img ngSrc="assets/images/foam/1.jpg" alt="Превью дома" height="578" width="438"/>
+        </span>
+          <span class="button-text">Пеноблок<br><p>Общая площадь дома 110 м2.<br>Фундамент - утепленная плита.<br>Тёплый контур.<br>Материал стен - пеноблок.	</p></span>
+      </button>
+    </li>
+    <li>
+      <button class="custom-button" [routerLink]="['/houses', 2]" >
+        <span class="button-image">
+          <img ngSrc="assets/images/barn/1.jpg" alt="Превью дома" height="578" width="438"/>
+        </span>
+        <span class="button-text">Барн<br><p>Одноквартирный каркасный дом 11.000 х 7.500 мм.<br>Общая площадь дома составляет: 73,33 м2.<br>Жилая площадь - 52,65 м2.<br>Высота этажа 2,460 мм. – 3,900 мм.	</p></span>
+      </button>
+    </li>
+    <li>
+      <button class="custom-button" [routerLink]="['/houses', 3]" >
+        <span class="button-image">
+          <img ngSrc="assets/images/477/1.jpg" alt="Превью дома" height="578" width="438"/>
+        </span>
+        <span class="button-text">Проект 477<br><p>	Общая площадь дома 58,58 м2.<br>Силовой каркас из обрезной доски камерной сушки 50х200 мм.<br>Кровельное покрытие металлочерепица.<br>Утепление наружных стен, кровли, пола 200 мм.<br>Фасадная отделка имитация под брус.<br>Внутренняя отделка имитация под брус.<br>Фундамент винтовые сваи.</p></span>
+      </button>
     </li>
   </ul>
+  </nav>
 </div>

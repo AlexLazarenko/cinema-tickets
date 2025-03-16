@@ -67,14 +67,14 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cinema-tickets:build:development"
+            "buildTarget": "cinema-tickets:build:development"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cinema-tickets:build:production"
+              "buildTarget": "cinema-tickets:build:production"
             },
             "development": {
-              "browserTarget": "cinema-tickets:build:development"
+              "buildTarget": "cinema-tickets:build:development"
             }
           },
           "defaultConfiguration": "development"

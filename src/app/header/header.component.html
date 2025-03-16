@@ -1,9 +1,27 @@
 <header>
-  <nav>
-    <ul>
-      <li><a href="#">Главная</a></li>
-      <li><a href="#">О нас</a></li>
-      <li><a href="#">Контакты</a></li>
-    </ul>
-  </nav>
+  <a class="logo-image" [routerLink]="'/houses'">
+    <img ngSrc="assets/images/logo.jpg" alt="Наложенное изображение" height="1055" width="1206" />
+  </a>
+  <div class="header-content">
+    <div class="build">
+      <p>Строим качественно<br>и доступно</p>
+    </div>
+    <h2>Славный дом</h2>
+    <button class="custom-button" [routerLink]="['/calculate']">Расчет Вашего дома</button>
+  </div>
+  <div class="phone-number">
+      <a href="tel:+79956061706">+7 (995) 606 17 06</a>
+    <br>
+      <p>Ежедневно с 10:00 до 20:00</p>
+      <a [routerLink]="'/contacts'">Контакты</a>
+  </div>
+  <div class="phone">
+    <img ngSrc="assets/images/phone.png" alt="Иконка" height="694" width="705" />
+  </div>
+  <div class="time">
+    <img ngSrc="assets/images/time.png" alt="Иконка" height="707" width="702" />
+  </div>
+  <div class="book">
+    <img ngSrc="assets/images/book.png" alt="Иконка" height="701" width="709" />
+  </div>
 </header>

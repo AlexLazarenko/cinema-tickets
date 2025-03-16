@@ -1,9 +1,29 @@
 <div class="movie">
- <h2>Single movie component</h2>
-  <p>{{movie.nameOfMovie}}</p>
-  <p>{{movie.movieDateTime}}</p>
-  <p>{{movie.description}}</p>
-  <img [attr.src]="movie.image"/>
-  <br>
-  <a [routerLink]="['/tickets', movie.id, movie.nameOfMovie]">Buy ticket</a>
+  <div class="universal-image" *ngIf="id === '2'">
+    <p>Барн</p>
+    <p>Одноквартирный каркасный дом 11.000 х 7.500 мм.<br>Общая площадь дома составляет: 73,33 м2.<br>Жилая площадь - 52,65 м2.<br>Высота этажа 2,460 мм. – 3,900 мм.	</p>
+    <img ngSrc="assets/images/barn/1.jpg" alt="Изображение" height="900" width="1600"/>
+    <img ngSrc="assets/images/barn/2.jpg" alt="Изображение" height="900" width="1600"/>
+    <img ngSrc="assets/images/barn/3.jpg" alt="Изображение" height="900" width="1600"/>
+    <img ngSrc="assets/images/barn/4.jpg" alt="Изображение" height="1600" width="899"/>
+    <img ngSrc="assets/images/barn/plan.jpg" alt="Изображение" height="1600" width="899"/>
+  </div>
+  <div class="universal-image" *ngIf="id === '3'">
+    <p>Проект 477</p>
+    <p>Общая площадь дома 58,58 м2.<br>Силовой каркас из обрезной доски камерной сушки 50х200 мм.<br>Кровельное покрытие металлочерепица.<br>Утепление наружных стен, кровли, пола 200 мм.<br>Фасадная отделка имитация под брус.<br>Внутренняя отделка имитация под брус.<br>Фундамент винтовые сваи.</p>
+    <img ngSrc="assets/images/477/1.jpg" alt="Изображение" height="729" width="1125"/>
+    <img ngSrc="assets/images/477/2.jpg" alt="Изображение" height="583" width="1004"/>
+    <img ngSrc="assets/images/477/3.jpg" alt="Изображение" height="558" width="1004"/>
+    <img ngSrc="assets/images/477/4.jpg" alt="Изображение" height="570" width="969"/>
+    <img ngSrc="assets/images/477/plan.jpg" alt="Изображение"  height="1219" width="1125"/>
+  </div>
+  <div class="universal-image" *ngIf="id === '1'">
+    <p>Пеноблок</p>
+    <p>	Общая площадь дома 110 м2.<br>Фундамент - утепленная плита.<br>Тёплый контур.<br>Материал стен - пеноблок.</p>
+    <img ngSrc="assets/images/foam/1.jpg" alt="Изображение" height="1017" width="1200"/>
+    <img ngSrc="assets/images/foam/2.jpg" alt="Изображение" height="1600" width="1200"/>
+    <img ngSrc="assets/images/foam/3.jpg" alt="Изображение" height="1200" width="1600"/>
+    <img ngSrc="assets/images/foam/4.jpg" alt="Изображение" height="1600" width="1200"/>
+    <img ngSrc="assets/images/foam/plan.jpg" alt="Изображение" height="1233" width="1600"/>
+  </div>
 </div>

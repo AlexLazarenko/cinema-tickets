@@ -17,6 +17,5 @@ export class RegistrationDataService {
 
   public sendRegistrationRequest(value: String){
    return this.httpClient.post("http://localhost:8080/auth/sign-up",value, this.httpOptions);
-       console.log(value);
   }
 }

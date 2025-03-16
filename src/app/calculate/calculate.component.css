@@ -1,0 +1,57 @@
+.calculate {
+  padding: 0;
+  margin-top: 200px; /* Отступ сверху соответствует высоте хедера */
+  margin-left: 10px;
+  background-color: #aeb0b2; /* Цвет фона */
+}
+
+.radio-label {
+  display: flex;
+  flex-direction: column; /* Располагаем элементы вертикально */
+  align-items: center; /* Центрируем текст и кнопку по вертикали */
+  gap: 8px; /* Расстояние между радиокнопкой и текстом */
+  text-align: left; /* Текст выравнивается по левому краю */
+  margin-top: 10px;
+}
+
+input[type="radio"] {
+  margin: 0; /* Убираем отступы вокруг радиокнопки */
+  vertical-align: middle; /* Центрируем радиокнопку */
+}
+
+p {
+  font-size: 1.5rem;
+  margin-left: 30px;
+}
+
+h2 {
+  margin-left: 23px;
+}
+
+.confidentiality p{
+  font-size: 1.15rem;
+  margin-left: 30px;
+}
+
+.userData {
+  display: flex;
+  flex-direction: column; /* Располагает элементы вертикально */
+  align-items: center; /* Центрируем текст и кнопку по вертикали */
+  text-align: center; /* Текст выравнивается по левому краю */
+}
+
+.userData button {
+  background-color: #4285b4;
+  color: white;
+}
+
+.userData p{
+  font-size: 1.25rem;
+}
+
+.user-input {
+  width: 100%; /* Поле занимает всю доступную ширину */
+  max-width: 1000px; /* Но не больше указанного значения */
+  box-sizing: border-box;
+}
+
